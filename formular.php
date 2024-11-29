@@ -14,28 +14,24 @@
 
 
     <?php
+        $pole = ["Jozo", "Jano", "Lucia"];
+        $asocPole = ["Jozo"=>"123", "Jano"=>"456", "Lucia"=>"789"];
         if(isset($_POST["tlacidlo"])) {
-            if(isset($_POST["meno"]) && isset($_POST["heslo"]))
+            if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
                 $meno = $_POST["meno"];
                 $heslo = $_POST["heslo"];
-
-                if(!ctype_alpha($meno)) {
-                    echo "meno musi obsahovat len znaky abecedy <br>";
-                }
+                if(in_array($meno, $pole) && $asocPole[$meno] == $_POST["heslo"]) {
+                    echo "Ste prihlasený";
+                } 
                 else {
-                    echo "vase meno je".$meno."<br>";
-                }
-                if(strlen($heslo) < 3 || strlen($heslo) > 11) {
-                    echo "chyba dlhe alebo kratke heslo";
-                }
-                else {
-                    echo "vase heslo je".$heslo;
+                    die("chyba nespravne pouzivatelske meno alebo heslo");
                 }
                 
-
+     
+                
             }
 
-    
+        }
 
     ?>
 

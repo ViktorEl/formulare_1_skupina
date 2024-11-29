@@ -16,12 +16,13 @@
     <?php
         if(isset($_POST["tlacidlo"])) {
             if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
-                echo "meno aj heslo su dostupne";
+                $meno = $_POST["meno"];
+                $heslo = $_POST["heslo"];
+                echo "Vase meno je ".$meno." a vaše heslo je:".$heslo;
             }
             else {
                 echo "meno a heslo nie su dostupne";
             }
-        
         }
     
 

@@ -15,13 +15,15 @@
 
     <?php
         if(isset($_POST["tlacidlo"])) {
-            echo "Udaje odoslane";
+            if(isset($_POST["meno"]) && isset($_POST["heslo"])) {
+                echo "meno aj heslo su dostupne";
+            }
+            else {
+                echo "meno a heslo nie su dostupne";
+            }
+        
         }
-        else {
-            echo "chyba odosielania";
-        }
-
-
+    
 
     ?>
 

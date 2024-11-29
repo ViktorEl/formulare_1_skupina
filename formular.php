@@ -18,10 +18,21 @@
             if(isset($_POST["meno"]) && isset($_POST["heslo"]))
                 $meno = $_POST["meno"];
                 $heslo = $_POST["heslo"];
-                echo "Vase meno je ".$meno." a vaše heslo je:".$heslo;
-            }
-            else {
-                echo "nezadali ste meno alebo heslo";
+
+                if(!ctype_alpha($meno)) {
+                    echo "meno musi obsahovat len znaky abecedy <br>";
+                }
+                else {
+                    echo "vase meno je".$meno."<br>";
+                }
+                if(strlen($heslo) < 3 || strlen($heslo) > 11) {
+                    echo "chyba dlhe alebo kratke heslo";
+                }
+                else {
+                    echo "vase heslo je".$heslo;
+                }
+                
+
             }
 
     

@@ -20,7 +20,8 @@
                 else {
                     die("chyba nespravne pouzivatelske meno alebo heslo");
                 }
-                         
+                
+         
             }
 
         }

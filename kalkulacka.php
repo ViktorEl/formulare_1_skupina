@@ -21,8 +21,8 @@
             <option value="4">*</option>
             <option value="5">/</option>
         </select>
+        <input type="submit" name="tlacidlo" value="vypocitaj">
     </form>
 
-    
 </body>
 </html>

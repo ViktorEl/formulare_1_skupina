@@ -23,6 +23,26 @@
                 if(count($_POST["jazyk"]) < 2 || count($_POST["jazyk"]) > 3) {
                     die("musite vybrat minimalne 2 a maximalne 3 moznosti");
                 }
+                $pole = $_POST["jazyk"];
+                foreach($pole as $prvok) {
+                    if($prvok == "1") {
+                        echo "vybrali ste si PHP";
+                        echo "<br>";
+                    }
+                    elseif($prvok == "2") {
+                        echo "vybrali ste si Javu";
+                        echo "<br>";
+                    }
+                    elseif($prvok == "3") {
+                        echo "vybrali ste si Python";
+                        echo "<br>";
+                    }
+                    else {
+                        echo "vybrali ste si C++";
+                        echo "<br>";
+                    }
+                }
+
 
 
             }

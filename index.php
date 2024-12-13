@@ -12,6 +12,31 @@
     <input type="radio" name="jazyk" value="3"><label>Java<label> <br>
     <input type="submit" name="tlacidlo" value="odoslať">
     </form>
+
+
+    <?php
+        if(isset($_POST["tlacidlo"])) {
+            if(isset($_POST["jazyk"])) {
+                $vyber = $_POST["jazyk"];
+                if(empty($vyber)) {
+                   die("nevybrali ste si nic"); 
+                }
+                
+
+
+            }
+        }
+
+
+    ?>
+
+
+
+
+
 </body>
+
+
+
 
 </html>

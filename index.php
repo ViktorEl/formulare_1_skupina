@@ -17,15 +17,24 @@
     <?php
         if(isset($_POST["tlacidlo"])) {
             if(isset($_POST["jazyk"])) {
-                $vyber = $_POST["jazyk"];
-                if(empty($vyber)) {
-                   die("nevybrali ste si nic"); 
+                    $vyber = $_POST["jazyk"];
+                    if($vyber == "1") {
+                        echo "Vybrali ste si Python";
+                    }
+                    elseif($vyber == "2") {
+                        echo "Vybrali ste si C++";
+                    }
+                    elseif($vyber == "3") {
+                        echo "vybrali ste si Javu";
+                    }
+                    else {
+                        echo "nevybrali ste si ziadnu moznost";
+                    }
+                } 
+                } 
+                else {
+                    die("chyba");
                 }
-                
-
-
-            }
-        }
 
 
     ?>

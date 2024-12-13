@@ -19,8 +19,17 @@
 
     <?php
         if(isset($_POST["tlacidlo"])) {
+            if(isset($_POST["jazyk"])) {
+                if(count($_POST["jazyk"]) < 2 || count($_POST["jazyk"]) > 3) {
+                    die("musite vybrat minimalne 2 a maximalne 3 moznosti");
+                }
 
-            
+
+            }
+            else {
+                die("nevybrali ste ziadnu moznost");
+            }
+
         }
    
 

@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="formular.php" name="registracia" method="post" >
-        <input type="text" name="meno" placeholder="Zadajte meno" required> <br>
-        <input type="password" name="heslo" placeholder="Zadajte heslo" required> <br>
-        <input type="submit" name="tlacidlo" value="Odoslať"> <br>
+    <form action="index.php" method="post">
+    <input type="radio" name="jazyk" value="1"><label>Python</label> <br>
+    <input type="radio" name="jazyk" value="2"><label>C++</label> <br>
+    <input type="radio" name="jazyk" value="3"><label>Java<label> <br>
+    <input type="submit" name="tlacidlo" value="odoslať">
     </form>
 </body>
 

@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>Učíme sa skryť formulár</h2>
 
-    <form action="index.php" method="post">
-        <input type="checkbox" name="znacka[]" value="1"> <label>Mercedes</label> <br>
-        <input type="checkbox" name="znacka[]" value="2"> <label>Audi</label> <br>
-        <input type="checkbox" name="znacka[]" value="3"> <label>BMW</label> <br>
-        <input type="submit" name="tlacidlo" value="Odoslať">
-    </form>
 
-    <?php
+<?php
+        $stav = false;
         if(isset($_POST["tlacidlo"])) {
+            $stav = true;
             if(isset($_POST["znacka"])) {
                 $pole = $_POST["znacka"];
                 $pocet = count($pole);
@@ -40,14 +36,28 @@
                 }
 
 
+            } else {
+                die("chyba musite si vybrat 2 moznosti");
             }
 
         }
+        ?>
+
+    <h2>Učíme sa skryť formulár</h2>
+
+    <form action="index.php" method="post" id="<?php if($stav == true) echo 'skrytie'; ?>">
+        <input type="checkbox" name="znacka[]" value="1"> <label>Mercedes</label> <br>
+        <input type="checkbox" name="znacka[]" value="2"> <label>Audi</label> <br>
+        <input type="checkbox" name="znacka[]" value="3"> <label>BMW</label> <br>
+        <input type="submit" name="tlacidlo" value="Odoslať">
+    </form>
 
 
 
 
-    ?>
+
+
+
 
 
 
